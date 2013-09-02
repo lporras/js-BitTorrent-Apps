@@ -1,0 +1,58 @@
+ul.bs-docs-social-buttons{
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+pre code ul{
+  list-style: none !important;
+}
+
+ul.bs-docs-social-buttons li{
+  display: inline-block;
+  padding: 5px 8px;
+  line-height: 1;
+}
+
+.bs-docs-social {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.container{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+span.min{
+  text-transform: none;
+  text-decoration: underline;
+}
+
+section.iframe-section{
+  position: relative;
+}
+
+div#api-visualizer-container{
+  height   : 900px;
+  overflow : hidden;
+  position : absolute;
+  left: -200px;
+  top: -70px;
+}
+
+iframe#api-visualizer{
+  position : relative;
+  top      : -340px;
+  left     : -33px;
+  width    : 1280px;
+  height   : 1080px;
+}
+
+.thumbnail{
+  display: block;
+  padding: 4px;
+  line-height: 1;
+  border: 1px solid #ddd;
+}

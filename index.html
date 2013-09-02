@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>BitTorrent Web Apps</title>
+
+    <meta name="description" content="A presentation that introduce Btapps to the world">
+    <meta name="author" content="Luis Porras">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <link rel="stylesheet" href="css/theme/custom.css" id="theme-override">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Apps con <span class="min">BitTorrent</span></h1>
+          <br/>
+          <br/>
+          <p>
+            <small>
+              Presentado por <a href="https://github.com/lporras">Luis Porras</a> / <a href="http://twitter.com/lporras16">@lporras16</a>
+              </br>
+              <img src="https://twimg0-a.akamaihd.net/profile_images/681513627/perfil4.jpg" width="100px">
+            </small>
+            </br>
+            <small>Ruby/Javascript Developer en <strong><a href="http://continuum.cl/">Continuum</a></strong></small>
+          </p>
+          <br/>
+          <br/>
+          <br/>
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+
+        <section>
+          <h2>Barranquilla Y Osorno</h2>
+          <br/>
+          <a href="#"><img src="images/Barranquilla-y-osorno.png" width="400px"></a>
+        </section>
+
+
+        <section>
+          <h2>¿Conocen BitTorrent?</h2>
+          <br/>
+          <br/>
+          <ul>
+            <li class='fragment' data-fragment-index='1'>Protocolo para Intercambio de archivos peer-to-peer</li>
+            <li class="fragment" data-fragment-index='2'>Comunmente usado para transferir archivos grandes</li>
+            <li class="fragment" data-fragment-index='3'>Favorito de piratas</li>
+            <div style="text-align: center;"><img class="fragment" data-fragment-index='4' src="images/pirate-bay-laptop.jpg" width="350"></div>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Creado por</h2>
+          <br/>
+          <br/>
+          <img src="images/Bram-cohen-codecon-2006.png" width="600px">
+          <aside class="notes">
+             <ul>
+             <li>Bram Cohen diseñó el protocolo en abril de 2001</li>
+             <li>publicó su primera implementación el 2 de julio de 2001</li>
+             <li>En enero de 2012, BitTorrent tenía 150 millones de usuarios activos de acuerdo con BitTorrent, Inc</li>
+             <li>tras el cierre de la web Megaupload, el uso de esta plataforma se ha incrementado considerablemente</li>
+             </ul>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Muerte de Un Grande</h2>
+          <br/>
+          <img src="images/MegaUpload Rip.jpeg" width="600px">
+          <aside class="notes">
+            Los países de habla hispana representaban ocho de los 12 donde Megaupload aparecía en la lista de las 30 páginas web más visitadas. La conquista de Latinoamérica se consumó gracias a sitios como Taringa y Cuevana, ambos creados en Argentina.
+          </aside>
+        </section>
+
+        <section>
+          <h2>RENACE LA LEYENDA</h2>
+          <br/>
+          <img src="images/mega.png" width="800px">
+          <aside class="notes">
+            Los países de habla hispana representaban ocho de los 12 donde Megaupload aparecía en la lista de las 30 páginas web más visitadas. La conquista de Latinoamérica se consumó gracias a sitios como Taringa y Cuevana, ambos creados en Argentina.
+          </aside>
+        </section>
+
+        <section>
+          <h2>UnOfficial Mega Search Portal</h2>
+          <br/>
+          <a href="http://mega-search.me/"><img src="images/mega-search.png" width="800px"></a>
+          <aside class="notes">
+            <p>Technically the site doesn’t search Kim Dotcom’s Mega. Instead, it allows users to submit links to files hosted on Mega and makes this repository searchable.</p>
+            <p>Mega-Search.me, a searchable repository of files hosted on Kim Dotcom’s Mega, has launched a new sister site. Mega-Stream.me brings back some of the Megavideo glory by allowing users to stream video and audio files from Mega. Users can stream videos directly from the Mega-Search.me website or paste a link to an audio or video file hosted on Mega.</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>UnOfficial Mega Video Streamming Portal</h2>
+          <br/>
+          <a href="http://mega-stream.me/"><img src="images/MegaStreamMe.png" width="800px"></a>
+        </section>
+
+        <section>
+          <h2>Aclaraciones Importantes</h2>
+          <br/>
+          <br/>
+          <p class="fragment" data-fragment-index='1'>Por favor chiquillos <strong>NO APOYEN LA PIRATERIA</strong></p>
+          <br/>
+          <p class="fragment" data-fragment-index='2'>Esta charla no es para aprender a piratear</p>
+          <br/>
+          <p class="fragment" data-fragment-index='3'>Yo no soy un <strong>pirata</strong></p>
+        </section>
+
+        <section data-state="blackout">
+          <h2 style="position:fixed;top:35%;left:25%;">volvamos a BitTorrent</h2>
+        </section>
+
+        <section>
+          <h2>Estructura de una Red BitTorrent</h2>
+          <br/>
+          <ul>
+            <li class="fragment" data-fragment-index='1'><strong>Peers:</strong> (Puntos) Todos los usuarios de la Red</li>
+            <li class="fragment" data-fragment-index='2'><strong>Leechers:</strong> (Sanguijuelas) Usuarios que descargan archivos pero no comparten</li>
+            <li class="fragment" data-fragment-index='3'><strong>Seeders:</strong> (Semillas) Usuarios que contienen el archivo completo</li>
+            <li class="fragment" data-fragment-index='4'><strong>Trackers:</strong> (Rastreadores) Servidor especial que tiene información necesaría para que los peers se conecten unos a otros</li>
+          </ul>
+          <aside class="notes">
+            <p>Trackers: Inicialmente es la única forma de localizar qué usuarios contienen el archivo que se quiere descargar.</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>The Swarm (Enjambre)</h2>
+          <br/>
+          <br/>
+          <p class="fragment" data-fragment-index='1'>Los Usuarios que los trackers se encargan de buscar.</p>
+          <br/>
+          <h3 class="fragment" data-fragment-index='2'>Analogía</h3>
+          <p class="fragment" data-fragment-index='3'><strong>Tracker</strong>, panal de abejas.</p>
+          <p class="fragment" data-fragment-index='4'><strong>Enjambre</strong>, los usuarios.</p>
+          <p class="fragment" data-fragment-index='5'><strong>La miel</strong>, el contenido del torrent</p>
+        </section>
+
+        <section>
+          <img src="images/Red_bittorrent.jpg" style="background-color:white;" width="700">
+          <aside class="notes">
+          1. Un usuario baja de un servidor web un archivo .torrent que contiene la información del fichero que queremos descargar
+          <br/>
+          2. Este archivo .torrent se abre con algún "programa cliente", que sabe interpretar dicha información.
+          <br/>
+          3. El tracker y el peer se comunican a través de una 'conexión HTTP'. El tracker informa de la lista de todos los peers y seeds que contienen partes del archivo que queremos descargar. El tracker se actualiza con la información del nuevo peer que acaba de ingresar.
+          <br/>
+          4. Una vez que el peer sabe dónde tiene que buscar las partes necesarias, este peer se comunica con otros mediante 'sockets TCP' o 'UDP' y el archivo empieza a descargarse en el ordenador del usuario.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Clientes Torrents</h2>
+          <br/>
+          <br/>
+
+          <span><img src="images/utorrentLogo.png" style="background-color:rgb(0, 133, 63);padding:10px;"></span>
+          <span><img src="images/bitTorrentLogo.png" style="background-color:white;padding:10px;"></span>
+          <span><img src="images/vuze-bittorrent-client-logo.png" style="background-color:white;"></span>
+
+        </section>
+
+        <section>
+          <h2>Mejoras al Protocolo</h2>
+          <br/>
+          <br/>
+          <h3><a href="http://www.bittorrent.org/beps/bep_0000.html">Index of BitTorrent Enhancement Proposals</a></h3>
+
+
+        </section>
+
+        <section>
+          <h2>Mejoras al Protocolo</h2>
+          <br/>
+          <br/>
+          <h3>DHT (Distritbued Hash Table)</h3>
+
+          <br/>
+
+          <p class="fragment" data-fragment-index='1'>Cada <strong>Nodo</strong> conserva info de los nodos vecinos</p>
+          <p class="fragment" data-fragment-index='2'>Evitando un cuello de botella en la caida de un <strong>Tracker</strong></p>
+
+          <br/>
+
+          <p class="fragment" data-fragment-index='3'>Los clientes Torrent tienen la funcionalidad de desactivar el DHT con <strong>"Private Flag"</strong></p>
+
+        </section>
+
+        <section>
+          <h2>Mejoras al Protocolo</h2>
+          <br/>
+          <br/>
+          <h3>Web Seeding</h3>
+
+          <br/>
+
+          <p class="fragment" data-fragment-index='1'>Busca combinar la potencia de la descarga directa del servidor con la del P2P.</p>
+          <br/>
+          <p class="fragment" data-fragment-index='2'>Hay como mínimo una semilla completa de la que descargar siempre</p>
+          <br/>
+          <p class="fragment" data-fragment-index='3'><a href="http://www.bittorrent.org/beps/bep_0019.html">WebSeed - HTTP/FTP Seeding (GetRight style)</a></p>
+
+        </section>
+
+        <section>
+          <h2>Mejoras al Protocolo</h2>
+          <br/>
+          <br/>
+          <h3>Super Seeding</h3>
+
+          <br/>
+
+          <p class="fragment" data-fragment-index='1'>Ayuda a reducir el número de piezas que el 1er seed debe subir para crear las primeras semillas</p>
+
+          <aside class="notes">
+            <p>Cuando un seed “A” es super seeding, no es una semilla normal con el 100% del archivo sino que se oculta como un leecher normal que no tiene ningún dato. A medida que otros peers entran en el enjambre, el superseeder (el peer disfrazado) les manda un mensaje de que tiene una nueva pieza — una pieza que en realidad nunca ha sido enviada. Esto hará que el peer “B” del enjambre pida solamente ese trozo.</p>
+            <p>Cuando el peer “B” termina de descargar aquella pieza, el seed "A" no le comunicará que tiene otras piezas para enviar hasta que vea que la primera pieza que le envió a "B" haya sido compartida con al menos otro peer “C”. Mientras eso no pase, el peer “B” no tendrá acceso a ninguna de las demás piezas de la semilla “A”, y así “A” no desperdiciará su ancho de banda de subida teniendo que volver a enviar piezas que ya ha enviado.</p>
+          </aside>
+
+        </section>
+
+        <section>
+          <h2>Limitaciones</h2>
+          <br/>
+          <br/>
+          <p class="fragment" data-fragment-index='1'><strong>Leeching:</strong> Normalmente los usuarios se desconectan rápidamente una vez obtenido la copia completa de su archivo.</p>
+          <br/>
+          <p class="fragment" data-fragment-index='2'>Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente.</p>
+          <aside class="notes">
+            <p>
+              Se considera que lo justo es subir la misma cantidad de datos que se ha bajado, es decir que la tasa de descarga/subida sea de 1, pero este comportamiento no es común ni está garantizado en BitTorrent. Normalmente los usuarios se desconectan rápidamente una vez que han obtenido la copia completa de su archivo. Esto se denomina leeching.
+              <br/>
+              Esta forma de actuar provoca que aunque todo el contenido nuevo se comparta al principio muy rápidamente, con el paso de los días el torrent caduque porque no quedan semillas, ya que BitTorrent sólo ofrece incentivos a los leechers pero no a los seeds que no obtienen ninguna ventaja por permanecer subiendo a la red.
+            </p>
+            <p>
+              Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente. Para cada usuario registrado guardan las estadísticas de tráfico y utilizan un sistema de porcentajes que permite saber si el usuario comparte o no los datos que haya descargado o esté descargando. Muchos de estos trackers suelen expulsar a los usuarios que tienen un porcentaje bajo, ya que al no compartir no colaboran con la red.
+            </p>
+          </aside>
+        </section>
+
+        <section data-state="blackout">
+          <h2 style="position:fixed;top:35%;left:25%;">Sitios Relacionados a Torrent</h2>
+        </section>
+
+        <section>
+          <h2>Búscador más Famoso</h2>
+          <br/>
+          <a href="http://mega-stream.me/"><img src="images/pirate-bay-1.jpg" width="700px"></a>
+
+          <aside class="notes">
+            Recientemente la justicia sueca ha condenado a los webmasters de The Pirate Bay a multas y penas de cárcel por colaboración en la distribución de archivos con copyright, a pesar de que los contenidos en sí no están albergados en sus servidores.
+          </aside>
+
+        </section>
+
+        <section>
+          <h2>Universidad de Stanford</h2>
+          <br/>
+          <a href="http://see.stanford.edu/see/lecturelist.aspx?coll=2d712634-2bf1-4b55-9a3a-ca9d470755ee"><img src="images/stanford-university.png" width="700px"></a>
+        </section>
+
+
+        <section>
+          <h2>Torrent Freak</h2>
+          <br/>
+          <a href="http://torrentfreak.com/"><img src="images/TorrentFreak.png" width="800px"></a>
+        </section>
+
+        <section>
+          <h2>PUT IO</h2>
+          <br/>
+          <a href="https://put.io/"><img src="images/put.io.png" width="700px"></a>
+        </section>
+
+        <section>
+          <h2>HIVE</h2>
+          <br/>
+          <a href="https://hive.im/"><img src="images/Hive.png" width="700px"></a>
+        </section>
+
+        <section>
+          <h2>Tv.js : Apple TV for Torrent Streaming</h2>
+          <iframe width="520" height="415" src="//www.youtube.com/embed/j71NCZnLffg" frameborder="0" allowfullscreen></iframe><p>Una aplicación para SmartTv que permite ver peliculas de archivos BitTorrent</a> por <a href="https://github.com/SamyPesse/tv.js">Samy Pessé</a></p>
+        </section>
+
+        <section>
+          <h2>BTAPPS LAB</h2>
+          <br/>
+          <br/>
+          <a href="http://torque.bittorrent.com/labs/"><img src="images/Btapps-Labs.png" width="700px"></a>
+        </section>
+
+        <section>
+          <h2>Yify Torrent Plugin</h2>
+          <br/>
+          <img src="images/yify-plugin.png" width="700px">
+        </section>
+
+        <section>
+          <h2>Yify Torrent Plugin in Action</h2>
+          <br/>
+          <img src="images/yify-plugin-in-action.png" width="700px">
+        </section>
+
+        <section data-state="blackout">
+          <h2 style="position:fixed;top:35%;left:25%;">viejito, y los smart fons?</h2>
+        </section>
+
+        <section>
+          <h2>UTORRENT</h2>
+          <br/>
+          <img src="images/uTorrent-mobile.png" width="600px">
+        </section>
+
+        <section data-state="blackout">
+          <h2 style="position:fixed;top:35%;left:25%;">Suficiente de Historia</h2>
+        </section>
+
+        <section>
+          <h2><a href="http://btappjs.com/index.html"><img src="images/Btapp.js-logo.png" style="background-color:white;"></a></h2>
+
+          <div class="fragment">
+            <div class="bs-docs-social">
+              <div class="container">
+                <ul class="bs-docs-social-buttons">
+                  <li>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=bittorrenttorque&amp;repo=btapp&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                  </li>
+                  <li>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=bittorrenttorque&amp;repo=btapp&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
+                  </li>
+                  <li class="follow-btn">
+                    <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.1368146021.html#_=1369276897359&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=pwmckenna&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" style="width: 235px; height: 20px;" title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
+                  </li>
+                  <li class="tweet-btn">
+                    <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369276897353&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fbtappjs.com%2Findex.html&amp;related=pwmckenna%3ACreator%20of%20Btapp&amp;size=m&amp;text=Btapp.js&amp;url=http%3A%2F%2Fbtappjs.com&amp;via=btappjs" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+
+          <h2>¿Qué es Btapp.js?</h2>
+
+          <br/>
+          <br/>
+          <ul>
+            <li class='fragment' data-fragment-index='1'>Librería Javascript</li>
+            <li class="fragment" data-fragment-index='2'>Desarrollada por BitTorrent Inc.</li>
+            <li class="fragment" data-fragment-index='3'>Permite administrar torrents y muchas cosas más</li>
+          </ul>
+
+        </section>
+
+        <section>
+
+          <h2>Funcionalidades Interesantes</h2>
+
+          <br/>
+          <br/>
+          <ul>
+            <li class="fragment" data-fragment-index='1'>Incluye: <a href="javascript:;">Torque</a>, un cliente torrent Headless</li>
+            <li class="fragment" data-fragment-index='2'>Compatibilidad con versiones alfa de <a href="javascript:;">BitTorrent</a> y <a href="http://download.utorrent.com/latest/uTorrent-alpha.exe"><strong>uTorrent</strong> (version 3.3 en adelante)</a></li>
+            <li class="fragment" data-fragment-index='3'>Streamming mientras la descarga está en proceso</li>
+            <li class="fragment" data-fragment-index='4'>Mover archivos a <a href="javascript:;">iTunes</a></li>
+            <li class="fragment" data-fragment-index='5'>Seleccionar archivos a Descargar</li>
+          </ul>
+
+        </section>
+
+        <section data-state="blackout">
+          <h2 style="position:fixed;top:35%;left:25%;">Dependencias</h2>
+        </section>
+
+
+        <section>
+          <h2>Dependencias</h2>
+          <p>Btapp.js depente fuertemente de <a href="https://github.com/jquery/jquery" target="_blank">jQuery</a>, <a href="https://github.com/documentcloud/backbone" target="_blank">Backbone</a>, <a href="https://github.com/douglascrockford/JSON-js" target="_blank">Json2</a> y <a href="https://github.com/andris9/jStorage" target="_blank">jStorage</a>
+          </p>
+          <br/>
+          <br/>
+          <pre class="fragment" style="width:1075px; margin-left:-64px;"><code class="" contenteditable>
+<ul class=""><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://code.jquery.com/jquery-1.7.2.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">  </span></li><li class="L1"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">  </span></li><li class="L2"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://underscorejs.org/underscore-min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">  </span></li><li class="L3"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://backbonejs.org/backbone-min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L4"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://raw.github.com/andris9/jStorage/master/jstorage.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li></ul>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Dependencias</h2>
+          <br/>
+          <br/>
+          <p><a href="https://github.com/bittorrenttorque/backbrace">Backbrace</a> es altamente recomendado, para aliviar algunos de los problemas que podrías tener usando árboles profundos de modelos y colecciones.</p>
+          <br/>
+          <pre class="fragment" style="width:130%; margin-left: -100px;"><code class="" contenteditable>
+<ul class="linenums"><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://raw.github.com/bittorrenttorque/backbrace/master/backbrace.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li></ul>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Código Fuente</h2>
+          <br/>
+          <br/>
+          <pre class="fragment" style="width:1075px"><code class="" contenteditable>
+<ul class="linenums"><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://torque.bittorrent.com/btapp/btapp.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li></ul>
+          </code></pre>
+          <br/>
+          <br/>
+          <p class="fragment">
+            O...
+            <a class="btn btn-large" href="https://github.com/bittorrenttorque/btapp/zipball/master">Descargar Btapp.js source</a>
+          </p>
+        </section>
+
+        <section data-state="blackout">
+          <h2 style="position:fixed;top:35%;left:25%;">Compatibilidad del API</h2>
+        </section>
+
+        <section>
+          <h2>Compatibilidad del API</h2>
+          <br/>
+          <p class="fragment">
+            Por defecto, el Api tratará de usar <a href="javascript:;">Torque</a>
+          </p>
+          <br/>
+          <br/>
+          <p class="fragment">lo que significa, facilita la instalación de un <a href="javascript:;">plugin</a>, y el mencionado <a href="javascript;">cliente torrent</a> Si no se encuentra.</p>
+        </section>
+
+        <section>
+          <h2>Conectarse a Clientes Torrents</h2>
+          <br/>
+          <div class="fragment">
+            <h3>Torque</h3>
+            <pre style=""><code contenteditable>
+//Se conecta a Torque (por Defecto)
+var btapp = new Btapp;
+btapp.connect();
+            </code></pre>
+          </div>
+          <div class="fragment">
+            <p>O...</p>
+            <pre class="fragment" style=""><code contenteditable>
+//Usando la sintáxis de plugin
+var btapp = new Btapp;
+btapp.connect({
+product: 'Torque'
+plugin: true
+});
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Conectarse a Clientes Torrents</h2>
+          <div class="fragment">
+            <h3>uTorrent</h3>
+            <pre class="fragment" style=""><code contenteditable>
+var btapp = new Btapp;
+btapp.connect({
+  product: 'uTorrent',
+  plugin: false,
+  pairing_type: 'native'
+});
+            </code></pre>
+          </div>
+          <div class="fragment">
+            <h3>BitTorrent</h3>
+            <pre class="fragment" style=""><code contenteditable>
+var btapp = new Btapp;
+btapp.connect({
+  product: 'BitTorrent',
+  plugin: false,
+  pairing_type: 'native'
+});
+          </code></pre>
+          </div>
+        </section>
+
+        <section data-state="blackout">
+          <div style="position:fixed;top:35%;left:25%;">
+            <h2>Fragmentos de Código</h2>
+          </div>
+        </section>
+
+        <section>
+          <h2>Advertencia Asíncrona</h2>
+          <div class="fragment">
+            <p>No Hacer</p>
+            <pre><code contenteditable>
+var btapp = new Btapp();
+btapp.connect();
+
+btapp.get('torrent').each(function(torrent) {
+  torrent.remove();
+});
+          </code></pre>
+          </div>
+          <div class="fragment">
+            <p>Hacer</p>
+            <pre><code contenteditable>
+var btapp = new Btapp();
+btapp.connect();
+
+// Este código esperará por el evento de añadir el torrent.
+btapp.on('add:torrent', function(torrents) {
+  torrents.each(function(torrent) {
+    torrent.remove();
+  });
+});
+          </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Añadiendo un Torrent</h2>
+          <br/>
+          <br/>
+          <div class="fragment">
+            <pre><code contenteditable>
+var magnet = 'magnet:?xt=urn:btih:f0d665f264393a7dafd7d05d739e1097df652e80&dn=The.Yes.Men.Fix.The.World';
+
+//var url = 'http://vodo.net/media/torrents/Deadside.Pilot.2012.720p.x264-VODO.torrent';
+
+var callback = function() {
+  alert('añadido el torrent');
+};
+
+btapp.get('add').torrent({
+  url: magnet,
+  callback: callback
+});
+          </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Archivos Torrents</h2>
+          <br/>
+          <br/>
+          <div class="fragment">
+            <pre><code contenteditable>
+var files = btapp.get('torrent').get('D9C70109CB05C181F9EC9373BE876A0D40C4D7B0').get('file');
+
+> files.pluck('id');
+
+ ["Continuum Tour 2013.mkv", "Want.to.see.what.happens.next.url", "vodo.nfo"]
+          </code></pre>
+          </div>
+        </section>
+
+        <section style="">
+          <h2>Porcentage de Descarga del Torrent</h2>
+          <br/>
+          <br/>
+          <div class="fragment" style="position: absolute; top: 100px; left: -100px;">
+            <pre style="width:100%;"><code contenteditable style="max-height: 500px;">
+var btapp = new Btapp;
+btapp.connect();
+
+var url = 'http://vodo.net/media/torrents/Deadside.Pilot.2012.720p.x264-VODO.torrent';
+
+btapp.live('add', function(add) {
+  add.torrent(url);
+});
+
+btapp.live('torrent * properties download_url', function(download_url, properties) {
+  // Solo interesado en el torrent que tiene un download_url que coincide la url provista
+  if(download_url == url) {
+    var name = properties.get('name');
+    // Encontramos nuestro Torrent!
+    // Ahora escuchamos los cambios del progreso
+    properties.on('change:progress', function(progress) {
+      // Tenemos una actualización!
+      alert('Progreso de tu descarga de ' + name + ': ' + progress);
+    });
+  }
+});
+          </code></pre>
+          </div>
+        </section>
+
+
+        <section data-state="blackout">
+          <div style="position:fixed;top:35%;left:25%;">
+            <h2>Visualizador del API</h2>
+            <p><small>Mira lo que tu codigo puede ver.</small></p>
+          </div>
+        </section>
+
+        <section class="iframe-section">
+          <div id="api-visualizer-container">
+             <iframe id="api-visualizer" src="http://btappjs.com/visualizer.html#introduction" width="100%"></iframe>
+          </div>
+          <!--
+          <br/>
+          <img src="images/api_visualizer.png" width="100%" height="500px">
+          -->
+        </section>
+
+        <section>
+          <h2>Otro Material</h2>
+          <iframe src="http://player.vimeo.com/video/49047352" width="500" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/49047352">Programando en Vivo: Aplicación DHT usando btapp.js</a> por <a href="http://vimeo.com/pwmckenna">Patrick Williams</a> en <a href="http://vimeo.com">Vimeo</a>.</p>
+        </section>
+
+        <section data-state="blackout">
+          <div style="position:fixed;top:35%;left:25%;">
+            <h2>Demostración</h2>
+          </div>
+        </section>
+
+        <section data-state="blackout">
+          <div style="position:fixed;top:35%;left:25%;">
+            <h2>Preguntas?</h2>
+          </div>
+        </section>
+
+        <section data-state="blackout">
+          <div style="position:fixed;top:35%;left:25%;">
+            <h2>Gracias</h2>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

@@ -43,12 +43,12 @@
           <br/>
           <p>
             <small>
-              Presentado por <a href="https://github.com/lporras">Luis Porras</a> / <a href="http://twitter.com/lporras16">@lporras16</a>
+              Presentado por <a href="http://bit.ly/1G5pVik">Luis Porras</a> / <a href="http://bit.ly/1VStc6h">@lporras16</a>
               </br>
               <img src="images/Cv2fEQIV.jpg" width="100px">
             </small>
             </br>
-            <small>Software Engineer at <strong><a href="http://www.speakuptheapp.com/">Speakup</a></strong></small>
+            <small>Software Engineer at <strong><a href="http://bit.ly/1LNWe7z">Speakup</a></strong></small>
           </p>
           <br/>
           <br/>
@@ -61,13 +61,13 @@
         <section>
           <h2>PODCASTER EN</h2>
           <br/>
-          <a href="http://noderscast.com/#/"><img src="images/noderscast.png" width="800px"></a>
+          <a href="http://bit.ly/1MzJiB3"><img src="images/noderscast.png" width="800px"></a>
 
-          <a class="link" href="https://itunes.apple.com/cl/podcast/id1009061967" target="_blank"><span>iTunes</span></a>
+          <a class="link" href="http://apple.co/1jz8r37" target="_blank"><span>iTunes</span></a>
 
-          <a class="link" href="http://www.stitcher.com/podcast/noderscast/" target="_blank"><span> Stitcher </span></a>
+          <a class="link" href="http://bit.ly/1LknyVj" target="_blank"><span> Stitcher </span></a>
 
-          <a class="link" href="https://www.youtube.com/playlist?list=PLBEwfn9JYDc-8LKrnlcogwrILF08EqLHF" target="_blank"><span data-reactid=".0.3.0.1.3.2"> Youtube </span></a>
+          <a class="link" href="http://bit.ly/1GdbfND" target="_blank"><span data-reactid=".0.3.0.1.3.2"> Youtube </span></a>
         </section>
 
         <section>
@@ -86,7 +86,7 @@
           <h2>Creado por</h2>
           <br/>
           <br/>
-          <a href="https://www.youtube.com/watch?v=GTDRgzuW_No" target="_blank"><img src="images/Bram-cohen-codecon-2006.png" width="600px"></a>
+          <a href="http://bit.ly/1ZDa7cP" target="_blank"><img src="images/Bram-cohen-codecon-2006.png" width="600px"></a>
           <aside class="notes">
              <ul>
              <li>Bram Cohen diseñó el protocolo en abril de 2001</li>
@@ -13829,7 +13829,7 @@
           <h2>Estructura de una Red BitTorrent</h2>
           <br/>
           <ul>
-            <li class="fragment" data-fragment-index='1'><strong>Peers:</strong> (Nodos) Todos los usuarios de la Red</li>
+            <li class="fragment" data-fragment-index='1'><strong>Peers:</strong> (puntos) Todos los usuarios de la Red</li>
             <li class="fragment" data-fragment-index='2'><strong>Leechers:</strong> (Sanguijuelas) Usuarios que descargan archivos pero no comparten</li>
             <li class="fragment" data-fragment-index='3'><strong>Seeders:</strong> (Semillas) Usuarios que contienen el archivo completo</li>
             <li class="fragment" data-fragment-index='4'><strong>Trackers:</strong> (Rastreadores) Servidor especial que tiene información necesaría para que los peers se conecten unos a otros</li>
@@ -13876,12 +13876,72 @@
         </section>
 
         <section>
+          <h2>Decentralización</h2>
+          <br/>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>HTTP</th>
+                <th>Torrents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Encontrar URIs</th>
+                <td>Motores de Búsquedas, amigos</td>
+                <td>Motores de Búsquedas, amigos</td>
+              </tr>
+              <tr class="fragment" data-fragment-index='1'>
+                <th>Transferencia de Archivos</th>
+                <td>Un Servidor HTTP</td>
+                <td class="highlight">Muchos BitTorrent Peers</td>
+              </tr>
+              <tr class="fragment" data-fragment-index='2'>
+                <th>Encontrar Peers</th>
+                <td>DNS (Domain Name System)</td>
+                <td class="danger">Tracker Server</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Decentralización</h2>
+          <br/>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>HTTP</th>
+                <th>Magnet Links</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Encontrar URIs</th>
+                <td>Motores de Búsquedas, amigos</td>
+                <td>Motores de Búsquedas, amigos</td>
+              </tr>
+              <tr>
+                <th>Transferencia de Archivos</th>
+                <td>Un Servidor HTTP</td>
+                <td class="highlight">Muchos BitTorrent Peers</td>
+              </tr>
+              <tr>
+                <th>Encontrar Peers</th>
+                <td>DNS (Domain Name System)</td>
+                <td class="highlight">DHT (Distributed Hash Table)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
           <h2>Mejoras al Protocolo</h2>
           <br/>
           <br/>
           <h3><a target="_blank" href="http://www.bittorrent.org/beps/bep_0000.html">Index of BitTorrent Enhancement Proposals</a></h3>
-
-
         </section>
 
         <section>
@@ -13889,16 +13949,18 @@
           <br/>
           <br/>
           <h3><a href="http://www.bittorrent.org/beps/bep_0005.html" target="_blank">DHT (Distritbued Hash Table)</a></h3>
-
           <br/>
-
           <p class="fragment" data-fragment-index='1'>Cada <strong>Nodo</strong> conserva info de los nodos vecinos</p>
           <p class="fragment" data-fragment-index='2'>Evitando un cuello de botella en la caida de un <strong>Tracker</strong></p>
-
           <br/>
-
           <p class="fragment" data-fragment-index='3'>Los clientes Torrent tienen la funcionalidad de desactivar el DHT con <strong>"Private Flag"</strong></p>
+        </section>
 
+        <section>
+          <h2>Magnet URI</h2>
+          <br/>
+          <br/>
+          <p class="small">magnet:?xt=urn:btih:ef330b39f4801d25b4245212e75a38634bfc856e</p>
         </section>
 
         <section>
@@ -14003,7 +14065,7 @@
           <h2>BTAPPS LAB</h2>
           <br/>
           <br/>
-          <a href="http://torque.bittorrent.com/labs/"><img src="images/Btapps-Labs.png" width="700px"></a>
+          <a href="http://torque.bittorrent.com/labs/" target="_blank"><img src="images/Btapps-Labs.png" width="700px"></a>
         </section>
 
         <section data-state="blackout">
@@ -14027,63 +14089,14 @@
           <h2>Let's do this!</h2>
           <p class="fragment" data-fragment-index='1'>BTAPP.js</p>
           <p class="fragment" data-fragment-index='6'>+ Chrome Extensions</p>
-          <p class="fragment" data-fragment-index='2'>+ Backbone.js</p>
-          <p class="fragment" data-fragment-index='3'>+ Bootstrap + Handlebars</p>
+          <p class="fragment" data-fragment-index='2'>+ Backbone.js + Handlebars + SPA</p>
+          <p class="fragment" data-fragment-index='3'>+ Bootstrap</p>
           <p class="fragment" data-fragment-index='4'>+ Video.js</p>
           <p class="fragment" data-fragment-index='5'>+ CORS + JSONP, trasnochos, etc</p>
         </section>
 
         <section data-state="blackout">
           <img src="images/54ffe5266025c-dog1.jpg" width="600px">
-        </section>
-
-        <section>
-          <h2>Torrent Chrome Extension</h2>
-          <br/>
-          <img src="images/yify-plugin.png" width="700px">
-        </section>
-
-        <section>
-          <h2>PopCorn Time</h2>
-          <br/>
-          <img src="images/popcorn-time.png" width="700px">
-        </section>
-
-        <section>
-          <h2>TorrentTV</h2>
-          <br/>
-          <img src="images/torrent-tv.png" width="700px">
-        </section>
-
-        <section>
-          <h2>Torrent Stream</h2>
-          <br/>
-          <br/>
-          <p class="fragment" data-fragment-index='1'>Streaming Torrent Engine</p>
-          <p class="fragment" data-fragment-index='1'>Te permite acceder a los archivos dentro de torrents como node streams</p>
-          <p class="fragment" data-fragment-index='2'>Hecho por <a href="https://twitter.com/mafintosh" target="_blank">@mafintosh</a></p>
-          <p class="fragment" data-fragment-index='3'><img src="images/H0Pzjqj1.png" width="200px"></p>
-        </section>
-
-        <section>
-          <h2>Torrent Stream</h2>
-          <br/>
-          <p>Uso Básico</p>
-          <div class="fragment">
-            <pre style=""><code contenteditable>
-var torrentStream = require('torrent-stream');
-
-var engine = torrentStream('magnet:link');
-
-engine.on('ready', function() {
-    engine.files.forEach(function(file) {
-        console.log('filename:', file.name);
-        var stream = file.createReadStream();
-        // stream is readable stream to containing the file content
-    });
-});
-            </code></pre>
-          </div>
         </section>
 
         <section>
@@ -14133,6 +14146,122 @@ btapp.connect({
   pairing_type: 'native'
 });
           </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Añadiendo un Torrent</h2>
+          <br/>
+          <br/>
+          <div class="fragment">
+            <pre><code contenteditable>
+var magnet = 'magnet:?xt=urn:btih:f0d665f264393a7dafd7d05d739e1097df652e80&dn=The.Yes.Men.Fix.The.World';
+
+var callback = function() {
+  alert('añadido el torrent');
+};
+
+btapp.get('add').torrent({
+  url: magnet,
+  callback: callback
+});
+          </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Archivos Torrents</h2>
+          <br/>
+          <br/>
+          <div class="fragment">
+            <pre><code contenteditable>
+var files = btapp.get('torrent').get('D9C70109CB05C181F9EC9373BE876A0D40C4D7B0').get('file');
+
+> files.pluck('id');
+
+ ["JSCONF.mp4", "Want.to.see.what.happens.next.url", "vodo.nfo"]
+          </code></pre>
+          </div>
+        </section>
+
+
+        <section>
+          <h2>Torrent Chrome Extension</h2>
+          <br/>
+          <img src="images/yify-plugin.png" width="700px">
+        </section>
+
+        <section>
+          <h2>PopCorn Time</h2>
+          <br/>
+          <img src="images/popcorn-time.png" width="700px">
+        </section>
+
+        <section>
+          <h2>NetFlix</h2>
+          <br/>
+          <a href="http://nflx.it/1Pt666t" target="_blank"><img src="images/netflix.png" width="700px"></a>
+        </section>
+
+        <section>
+          <h2>TorrentTV</h2>
+          <br/>
+          <a href="http://bit.ly/1RHBm0F" target="_blank"></a><img src="images/torrent-tv.png" width="700px">
+        </section>
+
+        <section>
+          <h2>Torrent Stream</h2>
+          <br/>
+          <br/>
+          <p class="fragment" data-fragment-index='1'>Streaming Torrent Engine</p>
+          <p class="fragment" data-fragment-index='1'>Te permite acceder a los archivos dentro de torrents como node streams</p>
+          <p class="fragment" data-fragment-index='2'>Hecho por <a href="https://twitter.com/mafintosh" target="_blank">@mafintosh</a></p>
+          <p class="fragment" data-fragment-index='3'><img src="images/H0Pzjqj1.png" width="200px"></p>
+        </section>
+
+        <section>
+          <h2>Torrent Stream</h2>
+          <br/>
+          <p>Uso Básico</p>
+          <div class="fragment">
+            <pre style=""><code contenteditable>
+var torrentStream = require('torrent-stream');
+
+var engine = torrentStream('magnet:link');
+
+engine.on('ready', function() {
+    engine.files.forEach(function(file) {
+        console.log('filename:', file.name);
+        var stream = file.createReadStream();
+        // stream is readable stream to containing the file content
+    });
+});
+            </code></pre>
+            <a href="http://bit.ly/1LknEwh" target="_blank">GITHUB</a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Peerflix</h2>
+          <br/>
+          <p class="fragment" data-fragment-index='1'>Streaming torrent client for Node.js</p>
+          <p class="fragment" data-fragment-index='2'>Usa a torrent stream</p>
+          <p class="fragment" data-fragment-index='3'>Te permite reproducir un video en VLC Player</p>
+          <div class="fragment" data-fragment-index='4'>
+            <pre style=""><code contenteditable>
+              npm install -g peerflix
+
+              // Desde la terminal
+
+              peerflix "magnet:?xt=urn:btih:ef330b39f4801d25b4245212e75a38634bfc856e" --vlc
+            </code></pre>
+            <a href="http://bit.ly/1jojcG9" target="_blank">GITHUB</a>
+          </div>
+        </section>
+
+        <section>
+          <div style="position:fixed;top:35%;left:25%;">
+            <h2>Demostración</h2>
           </div>
         </section>
 
@@ -14341,8 +14470,6 @@ btapp.on('add:torrent', function(torrents) {
             <pre><code contenteditable>
 var magnet = 'magnet:?xt=urn:btih:f0d665f264393a7dafd7d05d739e1097df652e80&dn=The.Yes.Men.Fix.The.World';
 
-//var url = 'http://vodo.net/media/torrents/Deadside.Pilot.2012.720p.x264-VODO.torrent';
-
 var callback = function() {
   alert('añadido el torrent');
 };
@@ -14409,13 +14536,21 @@ btapp.live('torrent * properties download_url', function(download_url, propertie
 
         <section>
           <h2>Otro Material</h2>
-          <iframe src="http://player.vimeo.com/video/49047352" width="500" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/49047352">Programando en Vivo: Aplicación DHT usando btapp.js</a> por <a href="http://vimeo.com/pwmckenna">Patrick Williams</a> en <a href="http://vimeo.com">Vimeo</a>.</p>
+          <br/>
+          <iframe src="http://player.vimeo.com/video/49047352" width="500" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <br/>
+          <p><a href="http://vimeo.com/49047352">Programando en Vivo: Aplicación DHT usando btapp.js</a> por <a href="http://vimeo.com/pwmckenna">Patrick Williams</a> en <a href="http://vimeo.com">Vimeo</a>.</p>
         </section>
 
         <section>
-          <div style="position:fixed;top:35%;left:25%;">
-            <h2>Demostración</h2>
-          </div>
+          <h2>WebTorrent</h2>
+          <br/>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kxHRATfvnlw" frameborder="0" allowfullscreen></iframe>
+          <br/>
+          <a href="https://www.youtube.com/embed/kxHRATfvnlw" target="_blank">Feross Aboukhadijeh: WebTorrent - JSConf.Asia 2014</a>
+          <br/>
+          <br/>
+          <a href="http://bit.ly/1GdbpVk" target="_blank">GITHUB</a>
         </section>
 
         <section>
@@ -14431,13 +14566,13 @@ btapp.live('torrent * properties download_url', function(download_url, propertie
 
         <section>
           <div style="position:fixed;top:35%;left:25%;">
-            <h2>Preguntas?</h2>
+            <h2>Gracias</h2>
           </div>
         </section>
 
         <section>
           <div style="position:fixed;top:35%;left:25%;">
-            <h2>Gracias</h2>
+            <h2>Preguntas?</h2>
           </div>
         </section>
 

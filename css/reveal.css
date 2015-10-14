@@ -280,15 +280,41 @@ body {
 	max-height: 400px;
 }
 
+.reveal table {
+	  margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 .reveal table th,
 .reveal table td {
 	text-align: left;
-	padding-right: .3em;
+	/*padding-right: .3em;*/
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	border-bottom: 1px solid;
 }
 
 .reveal table th {
-	text-shadow: rgb(255,255,255) 1px 1px 2px;
+	/*text-shadow: rgb(255,255,255) 1px 1px 2px;*/
+	font-weight: bold;
 }
+
+.reveal table tr.fragment, .reveal table tr.fragment td, .reveal table tr.fragment th {
+	border-bottom: none;
+}
+
+.reveal table tr.fragment.visible, .reveal table tr.fragment.visible td, .reveal table tr.fragment.visible th {
+	border-bottom: 1px solid;
+}
+
+.reveal table td.highlight {
+	background-color: green;
+}
+
+.reveal table td.danger {
+	background-color: red;
+}
+
 
 .reveal sup {
 	vertical-align: super;
@@ -326,8 +352,8 @@ body {
 .reveal .controls div {
 	position: absolute;
 	opacity: 0.1;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border: 12px solid transparent;
 
 	-webkit-transition: opacity 0.2s ease;

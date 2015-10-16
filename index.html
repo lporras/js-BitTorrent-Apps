@@ -59,18 +59,6 @@
         </section>
 
         <section>
-          <h2>PODCASTER EN</h2>
-          <br/>
-          <a href="http://bit.ly/1MzJiB3"><img src="images/noderscast.png" width="800px"></a>
-
-          <a class="link" href="http://apple.co/1jz8r37" target="_blank"><span>iTunes</span></a>
-
-          <a class="link" href="http://bit.ly/1LknyVj" target="_blank"><span> Stitcher </span></a>
-
-          <a class="link" href="http://bit.ly/1GdbfND" target="_blank"><span data-reactid=".0.3.0.1.3.2"> Youtube </span></a>
-        </section>
-
-        <section>
           <h2>¿Conocen BitTorrent?</h2>
           <br/>
           <br/>
@@ -13865,6 +13853,35 @@
         </section>
 
         <section>
+          <h2>Limitaciones</h2>
+          <br/>
+          <br/>
+          <p class="fragment" data-fragment-index='1'><strong>Leeching:</strong> Normalmente los usuarios se desconectan rápidamente una vez obtenido la copia completa de su archivo.</p>
+          <br/>
+          <p class="fragment" data-fragment-index='2'>Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente.</p>
+          <aside class="notes">
+            <p>
+              Se considera que lo justo es subir la misma cantidad de datos que se ha bajado, es decir que la tasa de descarga/subida sea de 1, pero este comportamiento no es común ni está garantizado en BitTorrent. Normalmente los usuarios se desconectan rápidamente una vez que han obtenido la copia completa de su archivo. Esto se denomina leeching.
+              <br/>
+              Esta forma de actuar provoca que aunque todo el contenido nuevo se comparta al principio muy rápidamente, con el paso de los días el torrent caduque porque no quedan semillas, ya que BitTorrent sólo ofrece incentivos a los leechers pero no a los seeds que no obtienen ninguna ventaja por permanecer subiendo a la red.
+            </p>
+            <p>
+              Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente. Para cada usuario registrado guardan las estadísticas de tráfico y utilizan un sistema de porcentajes que permite saber si el usuario comparte o no los datos que haya descargado o esté descargando. Muchos de estos trackers suelen expulsar a los usuarios que tienen un porcentaje bajo, ya que al no compartir no colaboran con la red.
+            </p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Leeching</h2>
+          <img src="images/scumbag-steve-torrents.jpg" width="500px">
+        </section>
+
+        <section>
+          <h2>Seeding</h2>
+          <img src="images/seeder.jpg" width="500px">
+        </section>
+
+        <section>
           <h2>Clientes Torrents</h2>
           <br/>
           <br/>
@@ -13941,14 +13958,7 @@
           <h2>Mejoras al Protocolo</h2>
           <br/>
           <br/>
-          <h3><a target="_blank" href="http://www.bittorrent.org/beps/bep_0000.html">Index of BitTorrent Enhancement Proposals</a></h3>
-        </section>
-
-        <section>
-          <h2>Mejoras al Protocolo</h2>
-          <br/>
-          <br/>
-          <h3><a href="http://www.bittorrent.org/beps/bep_0005.html" target="_blank">DHT (Distritbued Hash Table)</a></h3>
+          <h3><a href="http://www.bittorrent.org/beps/bep_0005.html" target="_blank">DHT (Distributed Hash Table)</a></h3>
           <br/>
           <p class="fragment" data-fragment-index='1'>Cada <strong>Nodo</strong> conserva info de los nodos vecinos</p>
           <p class="fragment" data-fragment-index='2'>Evitando un cuello de botella en la caida de un <strong>Tracker</strong></p>
@@ -13993,26 +14003,13 @@
             <p>Cuando un seed “A” es super seeding, no es una semilla normal con el 100% del archivo sino que se oculta como un leecher normal que no tiene ningún dato. A medida que otros peers entran en el enjambre, el superseeder (el peer disfrazado) les manda un mensaje de que tiene una nueva pieza — una pieza que en realidad nunca ha sido enviada. Esto hará que el peer “B” del enjambre pida solamente ese trozo.</p>
             <p>Cuando el peer “B” termina de descargar aquella pieza, el seed "A" no le comunicará que tiene otras piezas para enviar hasta que vea que la primera pieza que le envió a "B" haya sido compartida con al menos otro peer “C”. Mientras eso no pase, el peer “B” no tendrá acceso a ninguna de las demás piezas de la semilla “A”, y así “A” no desperdiciará su ancho de banda de subida teniendo que volver a enviar piezas que ya ha enviado.</p>
           </aside>
-
         </section>
 
         <section>
-          <h2>Limitaciones</h2>
+          <h2>Mejoras al Protocolo</h2>
           <br/>
           <br/>
-          <p class="fragment" data-fragment-index='1'><strong>Leeching:</strong> Normalmente los usuarios se desconectan rápidamente una vez obtenido la copia completa de su archivo.</p>
-          <br/>
-          <p class="fragment" data-fragment-index='2'>Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente.</p>
-          <aside class="notes">
-            <p>
-              Se considera que lo justo es subir la misma cantidad de datos que se ha bajado, es decir que la tasa de descarga/subida sea de 1, pero este comportamiento no es común ni está garantizado en BitTorrent. Normalmente los usuarios se desconectan rápidamente una vez que han obtenido la copia completa de su archivo. Esto se denomina leeching.
-              <br/>
-              Esta forma de actuar provoca que aunque todo el contenido nuevo se comparta al principio muy rápidamente, con el paso de los días el torrent caduque porque no quedan semillas, ya que BitTorrent sólo ofrece incentivos a los leechers pero no a los seeds que no obtienen ninguna ventaja por permanecer subiendo a la red.
-            </p>
-            <p>
-              Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente. Para cada usuario registrado guardan las estadísticas de tráfico y utilizan un sistema de porcentajes que permite saber si el usuario comparte o no los datos que haya descargado o esté descargando. Muchos de estos trackers suelen expulsar a los usuarios que tienen un porcentaje bajo, ya que al no compartir no colaboran con la red.
-            </p>
-          </aside>
+          <h3><a target="_blank" href="http://www.bittorrent.org/beps/bep_0000.html">Index of BitTorrent Enhancement Proposals</a></h3>
         </section>
 
         <section data-state="blackout">
@@ -14037,12 +14034,6 @@
         </section>
 
         <section>
-          <h2>PUT IO</h2>
-          <br/>
-          <a href="https://put.io/"><img src="images/put.io.png" width="700px"></a>
-        </section>
-
-        <section>
           <h2>Twitter - Murder Project</h2>
           <br/>
           <iframe src="http://player.vimeo.com/video/11280885" width="600" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -14053,6 +14044,12 @@
           <h2>Torrent Freak</h2>
           <br/>
           <a href="http://torrentfreak.com/" target="_blank"><img src="images/TorrentFreak.png" width="800px"></a>
+        </section>
+
+        <section>
+          <h2>PUT IO</h2>
+          <br/>
+          <a href="https://put.io/"><img src="images/put.io.png" width="700px"></a>
         </section>
 
         <section data-state="blackout">
@@ -14066,37 +14063,6 @@
           <br/>
           <br/>
           <a href="http://torque.bittorrent.com/labs/" target="_blank"><img src="images/Btapps-Labs.png" width="700px"></a>
-        </section>
-
-        <section data-state="blackout">
-          <h2>Cómo construyo una chrome Extension?</h2>
-          <br/>
-          <img src="images/meme-dinosaur.jpeg" width="300px">
-
-        </section>
-
-        <section>
-          <h2>Chrome Extensions</h2>
-          <br/>
-          <br/>
-          <a href="https://developer.chrome.com/extensions/getstarted" target="_blank"><img src="images/chrome-extension-getting-started.png" width="400px"></a>
-        </section>
-
-        <section>
-
-          <br/>
-          <br/>
-          <h2>Let's do this!</h2>
-          <p class="fragment" data-fragment-index='1'>BTAPP.js</p>
-          <p class="fragment" data-fragment-index='6'>+ Chrome Extensions</p>
-          <p class="fragment" data-fragment-index='2'>+ Backbone.js + Handlebars + SPA</p>
-          <p class="fragment" data-fragment-index='3'>+ Bootstrap</p>
-          <p class="fragment" data-fragment-index='4'>+ Video.js</p>
-          <p class="fragment" data-fragment-index='5'>+ CORS + JSONP, trasnochos, etc</p>
-        </section>
-
-        <section data-state="blackout">
-          <img src="images/54ffe5266025c-dog1.jpg" width="600px">
         </section>
 
         <section>
@@ -14184,6 +14150,34 @@ var files = btapp.get('torrent').get('D9C70109CB05C181F9EC9373BE876A0D40C4D7B0')
           </div>
         </section>
 
+        <section data-state="blackout">
+          <h2>Cómo construyo una chrome Extension?</h2>
+          <br/>
+          <img src="images/meme-dinosaur.jpeg" width="300px">
+        </section>
+
+        <section>
+          <h2>Chrome Extensions</h2>
+          <br/>
+          <br/>
+          <a href="https://developer.chrome.com/extensions/getstarted" target="_blank"><img src="images/chrome-extension-getting-started.png" width="400px"></a>
+        </section>
+
+        <section>
+          <h2>Let's do this!</h2>
+          <br/>
+          <br/>
+          <p class="fragment" data-fragment-index='1'>BTAPP.js</p>
+          <p class="fragment" data-fragment-index='6'>+ Chrome Extensions</p>
+          <p class="fragment" data-fragment-index='2'>+ Backbone.js + Handlebars + SPA</p>
+          <p class="fragment" data-fragment-index='3'>+ Bootstrap</p>
+          <p class="fragment" data-fragment-index='4'>+ Video.js</p>
+          <p class="fragment" data-fragment-index='5'>+ CORS + JSONP, trasnochos, etc</p>
+        </section>
+
+        <section data-state="blackout">
+          <img src="images/54ffe5266025c-dog1.jpg" width="600px">
+        </section>
 
         <section>
           <h2>Torrent Chrome Extension</h2>
@@ -14192,15 +14186,16 @@ var files = btapp.get('torrent').get('D9C70109CB05C181F9EC9373BE876A0D40C4D7B0')
         </section>
 
         <section>
-          <h2>PopCorn Time</h2>
+          <h2>Lo logré</h2>
           <br/>
-          <img src="images/popcorn-time.png" width="700px">
+          <br/>
+          <img src="images/success-kid-meme-lg.jpg" width="500px">
         </section>
 
         <section>
-          <h2>NetFlix</h2>
+          <h2>PopCorn Time</h2>
           <br/>
-          <a href="http://nflx.it/1Pt666t" target="_blank"><img src="images/netflix.png" width="700px"></a>
+          <img src="images/popcorn-time.png" width="700px">
         </section>
 
         <section>
@@ -14535,11 +14530,18 @@ btapp.live('torrent * properties download_url', function(download_url, propertie
         </section> -->
 
         <section>
-          <h2>Otro Material</h2>
+          <h2>BTAPP Demo</h2>
           <br/>
           <iframe src="http://player.vimeo.com/video/49047352" width="500" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
           <br/>
           <p><a href="http://vimeo.com/49047352">Programando en Vivo: Aplicación DHT usando btapp.js</a> por <a href="http://vimeo.com/pwmckenna">Patrick Williams</a> en <a href="http://vimeo.com">Vimeo</a>.</p>
+        </section>
+
+        <section>
+          <h2>Streaming BitTorrent</h2>
+          <br/>
+          <br/>
+          <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Dr9z2b8uwUk" frameborder="0" allowfullscreen></iframe>
         </section>
 
         <section>
@@ -14562,6 +14564,18 @@ btapp.live('torrent * properties download_url', function(download_url, propertie
           en freenode
           <br/>
           <p></p>
+        </section>
+
+        <section>
+          <h2>PODCAST</h2>
+          <br/>
+          <a href="http://bit.ly/1MzJiB3"><img src="images/noderscast.png" width="800px"></a>
+
+          <a class="link" href="http://apple.co/1jz8r37" target="_blank"><span>iTunes</span></a>
+
+          <a class="link" href="http://bit.ly/1LknyVj" target="_blank"><span> Stitcher </span></a>
+
+          <a class="link" href="http://bit.ly/1GdbfND" target="_blank"><span data-reactid=".0.3.0.1.3.2"> Youtube </span></a>
         </section>
 
         <section>

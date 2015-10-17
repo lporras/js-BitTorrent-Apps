@@ -77,10 +77,10 @@
           <a href="http://bit.ly/1ZDa7cP" target="_blank"><img src="images/Bram-cohen-codecon-2006.png" width="600px"></a>
           <aside class="notes">
              <ul>
-             <li>Bram Cohen diseñó el protocolo en abril de 2001</li>
-             <li>publicó su primera implementación el 2 de julio de 2001</li>
-             <li>En enero de 2012, BitTorrent tenía 150 millones de usuarios activos de acuerdo con BitTorrent, Inc</li>
-             <li>tras el cierre de la web Megaupload, el uso de esta plataforma se ha incrementado considerablemente</li>
+              <li>Bram Cohen diseñó el protocolo en abril de 2001</li>
+              <li>publicó su primera implementación el 2 de julio de 2001</li>
+              <li>En enero de 2012, BitTorrent tenía 150 millones de usuarios activos de acuerdo con BitTorrent, Inc</li>
+              <li>tras el cierre de la web Megaupload, el uso de esta plataforma se ha incrementado considerablemente</li>
              </ul>
           </aside>
         </section>
@@ -13818,7 +13818,7 @@
           <br/>
           <ul>
             <li class="fragment" data-fragment-index='1'><strong>Peers:</strong> (puntos) Todos los usuarios de la Red</li>
-            <li class="fragment" data-fragment-index='2'><strong>Leechers:</strong> (Sanguijuelas) Usuarios que descargan archivos pero no comparten</li>
+            <li class="fragment" data-fragment-index='2'><strong>Leechers:</strong> (Sanguijuelas) Usuarios que descargan archivos y no contienen el archivo completo</li>
             <li class="fragment" data-fragment-index='3'><strong>Seeders:</strong> (Semillas) Usuarios que contienen el archivo completo</li>
             <li class="fragment" data-fragment-index='4'><strong>Trackers:</strong> (Rastreadores) Servidor especial que tiene información necesaría para que los peers se conecten unos a otros</li>
           </ul>
@@ -13852,13 +13852,19 @@
           </aside>
         </section>
 
+        <section style="position:fixed;top:55%;left:25%;">
+          <a href="http://mg8.org/processing/bt.html" target="_blank" style="font-size:40px;">Visualización</a>
+        </section>
+
         <section>
           <h2>Limitaciones</h2>
           <br/>
           <br/>
-          <p class="fragment" data-fragment-index='1'><strong>Leeching:</strong> Normalmente los usuarios se desconectan rápidamente una vez obtenido la copia completa de su archivo.</p>
+          <h3>Leeching</h3>
           <br/>
-          <p class="fragment" data-fragment-index='2'>Para evitar esto han aparecido los denominados trackers privados. Normalmente para usar un tracker privado hay que identificarse previamente.</p>
+          <p class="fragment" data-fragment-index='1'>
+            Normalmente los usuarios se desconectan rápidamente una vez obtenido la copia completa de su archivo.
+          </p>
           <aside class="notes">
             <p>
               Se considera que lo justo es subir la misma cantidad de datos que se ha bajado, es decir que la tasa de descarga/subida sea de 1, pero este comportamiento no es común ni está garantizado en BitTorrent. Normalmente los usuarios se desconectan rápidamente una vez que han obtenido la copia completa de su archivo. Esto se denomina leeching.
@@ -13872,13 +13878,11 @@
         </section>
 
         <section>
-          <h2>Leeching</h2>
-          <img src="images/scumbag-steve-torrents.jpg" width="500px">
+          <img src="images/scumbag-steve-torrents.jpg" width="570px">
         </section>
 
         <section>
-          <h2>Seeding</h2>
-          <img src="images/seeder.jpg" width="500px">
+          <img src="images/seeder.jpg" width="570px">
         </section>
 
         <section>
@@ -14541,7 +14545,7 @@ btapp.live('torrent * properties download_url', function(download_url, propertie
           <h2>Streaming BitTorrent</h2>
           <br/>
           <br/>
-          <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Dr9z2b8uwUk" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Dr9z2b8uwUk" frameborder="0" allowfullscreen></iframe>
         </section>
 
         <section>

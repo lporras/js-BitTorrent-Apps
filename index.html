@@ -13997,22 +13997,6 @@
           <h2>Mejoras al Protocolo</h2>
           <br/>
           <br/>
-          <h3>Super Seeding</h3>
-
-          <br/>
-
-          <p class="fragment" data-fragment-index='1'>Ayuda a reducir el número de piezas que el 1er seed debe subir para crear las primeras semillas</p>
-
-          <aside class="notes">
-            <p>Cuando un seed “A” es super seeding, no es una semilla normal con el 100% del archivo sino que se oculta como un leecher normal que no tiene ningún dato. A medida que otros peers entran en el enjambre, el superseeder (el peer disfrazado) les manda un mensaje de que tiene una nueva pieza — una pieza que en realidad nunca ha sido enviada. Esto hará que el peer “B” del enjambre pida solamente ese trozo.</p>
-            <p>Cuando el peer “B” termina de descargar aquella pieza, el seed "A" no le comunicará que tiene otras piezas para enviar hasta que vea que la primera pieza que le envió a "B" haya sido compartida con al menos otro peer “C”. Mientras eso no pase, el peer “B” no tendrá acceso a ninguna de las demás piezas de la semilla “A”, y así “A” no desperdiciará su ancho de banda de subida teniendo que volver a enviar piezas que ya ha enviado.</p>
-          </aside>
-        </section>
-
-        <section>
-          <h2>Mejoras al Protocolo</h2>
-          <br/>
-          <br/>
           <h3><a target="_blank" href="http://www.bittorrent.org/beps/bep_0000.html">Index of BitTorrent Enhancement Proposals</a></h3>
         </section>
 
